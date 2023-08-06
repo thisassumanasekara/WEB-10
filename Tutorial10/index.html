@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Operations</title>
+</head>
+<body>
+    <button onclick="performMathOperations()">Math Operations</button>
+
+    <script>
+        function performMathOperations() {
+            const num1Input = prompt("Enter the first number:");
+            const num2Input = prompt("Enter the second number:");
+            
+            const num1 = parseFloat(num1Input);
+            const num2 = parseFloat(num2Input);
+           
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Invalid input. Please enter valid numbers.");
+                return;
+            }            
+            const addition = num1 + num2;
+            const subtraction = num1 - num2;
+            const multiplication = num1 * num2;
+            let division;
+            if (num2 !== 0) {
+                division = num1 / num2;
+            } else {
+                division = "Cannot divide by zero";
+            }            
+            alert(`Addition: ${addition}\nSubtraction: ${subtraction}\nMultiplication: ${multiplication}\nDivision: ${division}`);
+        }
+    </script>
+</body>
+</html>
